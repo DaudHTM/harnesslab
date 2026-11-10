@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "tag-normalization",
+  "repository": "../../.harnesslab/repos/tag-utils",
+  "commit": "9a2da048e3d150a7304208d9b85626fd23e4b81e",
+  "issue": "normalize_tags must strip surrounding whitespace, lowercase tags, discard empty tags, remove duplicates, and return sorted results. Preserve the public function signature.",
+  "grading_dir": "../grading/tag-normalization",
+  "reference_patch": "../patches/tag-normalization.diff",
+  "split": "development",
+  "provenance": "Authored integration fixture; deliberately introduced bug; not an upstream issue or held-out benchmark."
+}

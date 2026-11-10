@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "boltons-one",
+  "repository": "../../.harnesslab/corpus/boltons-one",
+  "commit": "85cf2f71bad2bc256c687f540d98d8478a5fe624",
+  "issue": "one returns a match when several values satisfy the predicate. Return the sole matching value only when exactly one exists; otherwise return default. Preserve lazy consumption and falsey/default predicate behavior. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_iterutils.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/boltons-one",
+  "reference_patch": "../patches/boltons-one.diff",
+  "split": "held-out",
+  "provenance": "Authored regression mutation on https://github.com/mahmoud/boltons at d31d821d56c8f7756af9c30a864077f2e5855321; BSD-3-Clause. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

@@ -1,0 +1,11 @@
+--- a/inflection/__init__.py
++++ b/inflection/__init__.py
+@@ -331,7 +331,7 @@
+         if re.search(r'(?i)\b(%s)\Z' % inflection, word):
+             return word
+ 
+-    for rule, replacement in reversed(SINGULARS):
++    for rule, replacement in SINGULARS:
+         if re.search(rule, word):
+             return re.sub(rule, replacement, word)
+     return word

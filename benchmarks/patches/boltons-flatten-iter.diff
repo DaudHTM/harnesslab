@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -1048,7 +1048,7 @@
+     [1, 2, 3, 4, 5]
+     """
+     for item in iterable:
+-        if isinstance(item, Iterable) and not isinstance(item, str):
++        if isinstance(item, Iterable) and not isinstance(item, (str, bytes)):
+             yield from flatten_iter(item)
+         else:
+             yield item

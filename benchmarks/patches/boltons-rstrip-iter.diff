@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -257,7 +257,7 @@
+                     break
+             if not broken:  # Return to caller here because the end of the
+                 return     # iterator has been reached
+-            yield from ()
++            yield from cache
+         yield i
+ 
+ 

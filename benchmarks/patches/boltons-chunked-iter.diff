@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -355,7 +355,7 @@
+             break
+         lc = len(cur_chunk)
+         if lc < size and do_fill:
+-            cur_chunk[lc:] = [fill_val] * (size - lc - 1)
++            cur_chunk[lc:] = [fill_val] * (size - lc)
+         yield postprocess(cur_chunk)
+     return
+ 

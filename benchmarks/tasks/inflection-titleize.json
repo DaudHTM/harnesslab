@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "inflection-titleize",
+  "repository": "../../.harnesslab/corpus/inflection-titleize",
+  "commit": "f8127e2a00fa3e5981f2c43e3ab093f57bdcd304",
+  "issue": "titleize leaves words in uppercase. Restore human-readable title capitalization while retaining underscore/CamelCase conversion, apostrophe handling, and empty strings. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_inflection.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/inflection-titleize",
+  "reference_patch": "../patches/inflection-titleize.diff",
+  "split": "held-out",
+  "provenance": "Authored regression mutation on https://github.com/jpvanhal/inflection at 88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1; MIT. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -215,7 +215,7 @@
+     """
+     iterator = iter(iterable)
+     for i in iterator:
+-        if i == strip_value:
++        if i != strip_value:
+             yield i
+             break
+     for i in iterator:

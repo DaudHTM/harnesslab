@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -248,7 +248,7 @@
+     20
+ 
+     """
+-    return sum(map(bool, iterable))
++    return sum(map(pred, iterable))
+ 
+ 
+ def pad_none(iterable):

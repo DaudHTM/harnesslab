@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "inflection-underscore",
+  "repository": "../../.harnesslab/corpus/inflection-underscore",
+  "commit": "2f515efc07ad061f55fb9948cd9ea1c50971016b",
+  "issue": "underscore loses the boundary between an acronym and a following word. Restore snake_case conversion for acronym prefixes, ordinary CamelCase, hyphens, and digits without splitting an all-uppercase acronym into individual letters. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_inflection.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/inflection-underscore",
+  "reference_patch": "../patches/inflection-underscore.diff",
+  "split": "held-out",
+  "provenance": "Authored regression mutation on https://github.com/jpvanhal/inflection at 88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1; MIT. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -547,7 +547,7 @@
+                 next(t)
+             except StopIteration:
+                 continue
+-    return zip_longest(*tees, fillvalue=None)
++    return zip_longest(*tees, fillvalue=fill)
+ 
+ 
+ def xfrange(stop, start=None, step=1.0):

@@ -1,0 +1,7 @@
+diff --git a/normalizer.py b/normalizer.py
+--- a/normalizer.py
++++ b/normalizer.py
+@@ -1,2 +1,2 @@
+ def normalize_tags(tags):
+-    return sorted(tag.lower() for tag in tags)
++    return sorted({tag.strip().lower() for tag in tags if tag.strip()})

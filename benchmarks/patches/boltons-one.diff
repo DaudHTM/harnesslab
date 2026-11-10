@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -1007,7 +1007,7 @@
+ 
+     """
+     ones = list(itertools.islice(filter(key, src), 2))
+-    return ones[0] if len(ones) >= 1 else default
++    return ones[0] if len(ones) == 1 else default
+ 
+ 
+ def first(iterable, default=None, key=None):

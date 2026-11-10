@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "inflection-ordinalize",
+  "repository": "../../.harnesslab/corpus/inflection-ordinalize",
+  "commit": "b94709af66379932c61fb669dd70bd2a3cb1815b",
+  "issue": "ordinalize drops the sign of negative inputs. Preserve the original number in the formatted ordinal while choosing the correct suffix, including negative teens and values ending in 1/2/3. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_inflection.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/inflection-ordinalize",
+  "reference_patch": "../patches/inflection-ordinalize.diff",
+  "split": "development",
+  "provenance": "Authored regression mutation on https://github.com/jpvanhal/inflection at 88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1; MIT. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

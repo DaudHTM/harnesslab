@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -157,7 +157,7 @@
+     except TypeError:
+         return iter(deque(iterable, maxlen=n))
+     else:
+-        return islice(iterable, max(0, n), None)
++        return islice(iterable, max(0, size - n), None)
+ 
+ 
+ def consume(iterator, n=None):

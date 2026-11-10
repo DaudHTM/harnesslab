@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "name": "boltons",
+      "repository": "https://github.com/mahmoud/boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "license": "BSD-3-Clause",
+      "license_sha256": "c301912653a8d8c99eab6212aa3aea8d164ea249d8ad53c941e0558a0a5ac1e3",
+      "task_status": "10 authored regression tasks; validated under macos backend"
+    },
+    {
+      "name": "more-itertools",
+      "repository": "https://github.com/more-itertools/more-itertools",
+      "commit": "f42daddf205f335fea6e200dad46049f33e71221",
+      "license": "MIT",
+      "license_sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+      "task_status": "10 authored regression tasks; validated under macos backend"
+    },
+    {
+      "name": "inflection",
+      "repository": "https://github.com/jpvanhal/inflection",
+      "commit": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "license": "MIT",
+      "license_sha256": "9e9f9b4b2e7543ad1486f1328bf9ec50e5a5e2bb9caceb59652496dd61e64133",
+      "task_status": "10 authored regression tasks; validated under macos backend"
+    }
+  ]
+}

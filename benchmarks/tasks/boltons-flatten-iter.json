@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "boltons-flatten-iter",
+  "repository": "../../.harnesslab/corpus/boltons-flatten-iter",
+  "commit": "325669dcb3a7455a4d059a3887e810279afb53b2",
+  "issue": "flatten_iter expands bytes into integers. Strings and bytes must remain atomic while nested non-string iterables are recursively flattened. Preserve order and generator support. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_iterutils.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/boltons-flatten-iter",
+  "reference_patch": "../patches/boltons-flatten-iter.diff",
+  "split": "held-out",
+  "provenance": "Authored regression mutation on https://github.com/mahmoud/boltons at d31d821d56c8f7756af9c30a864077f2e5855321; BSD-3-Clause. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

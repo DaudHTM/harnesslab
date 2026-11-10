@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "more-itertools-first-true",
+  "repository": "../../.harnesslab/corpus/more-itertools-first-true",
+  "commit": "d3091dd19d46119f2af7c6a68a92b81ea4f54c53",
+  "issue": "first_true ignores its pred argument. Return the first predicate match even when it is falsey; use the caller's default when no match exists, while retaining normal truthiness behavior for pred=None. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_recipes.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/more-itertools-first-true",
+  "reference_patch": "../patches/more-itertools-first-true.diff",
+  "split": "held-out",
+  "provenance": "Authored regression mutation on https://github.com/more-itertools/more-itertools at f42daddf205f335fea6e200dad46049f33e71221; MIT. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

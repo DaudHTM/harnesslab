@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -501,7 +501,7 @@
+         for element in iterable:
+             k = key(element)
+             if k not in seen:
+-                seen.add(element)
++                seen.add(k)
+                 yield element
+ 
+ 

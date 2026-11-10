@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -855,7 +855,7 @@
+         for idx, func in enumerate(key_funcs):
+             if func(val):
+                 parts[idx].append(val)
+-                continue
++                break
+         else:
+             parts[-1].append(val)
+ 

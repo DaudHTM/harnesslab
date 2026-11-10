@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "inflection-humanize",
+  "repository": "../../.harnesslab/corpus/inflection-humanize",
+  "commit": "004985f07c6ccb56b6fe8d9276e57af5806d58ee",
+  "issue": "humanize removes internal _id substrings. Strip only a trailing _id suffix; preserve internal identifiers, replace underscores with spaces, and retain documented capitalization behavior. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_inflection.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/inflection-humanize",
+  "reference_patch": "../patches/inflection-humanize.diff",
+  "split": "development",
+  "provenance": "Authored regression mutation on https://github.com/jpvanhal/inflection at 88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1; MIT. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

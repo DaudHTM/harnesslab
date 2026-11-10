@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -231,7 +231,7 @@
+         True
+ 
+     """
+-    iterator = groupby(iterable)
++    iterator = groupby(iterable, key)
+     for first in iterator:
+         for second in iterator:
+             return False

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "inflection-tableize",
+  "repository": "../../.harnesslab/corpus/inflection-tableize",
+  "commit": "7556a4d05dcc5869bb2fd0508c2ee304ba32495e",
+  "issue": "tableize stops pluralizing table names. Convert class names to snake_case plural names, preserving irregular pluralization and already plural names. Preserve the public API and do not modify tests.",
+  "image": "harnesslab-task:local",
+  "visible_command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_inflection.py"
+  ],
+  "grade_command": [
+    "python",
+    "-I",
+    "/grading/run.py"
+  ],
+  "grading_dir": "../grading/inflection-tableize",
+  "reference_patch": "../patches/inflection-tableize.diff",
+  "split": "held-out",
+  "provenance": "Authored regression mutation on https://github.com/jpvanhal/inflection at 88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1; MIT. Synthetic task, not an upstream issue.",
+  "limits": {
+    "steps": 40,
+    "wall_seconds": 300,
+    "command_seconds": 30,
+    "tokens": 100000,
+    "cost_usd": 1,
+    "output_chars": 16000
+  }
+}

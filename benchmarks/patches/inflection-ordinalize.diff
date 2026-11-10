@@ -1,0 +1,11 @@
+--- a/inflection/__init__.py
++++ b/inflection/__init__.py
+@@ -257,7 +257,7 @@
+         '-1021st'
+ 
+     """
+-    return "{}{}".format(abs(number), ordinal(number))
++    return "{}{}".format(number, ordinal(number))
+ 
+ 
+ def parameterize(string: str, separator: str = '-') -> str:

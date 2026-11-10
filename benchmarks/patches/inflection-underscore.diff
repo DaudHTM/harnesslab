@@ -1,0 +1,11 @@
+--- a/inflection/__init__.py
++++ b/inflection/__init__.py
+@@ -413,7 +413,7 @@
+         'IoError'
+ 
+     """
+-    word = word
++    word = re.sub(r"([A-Z]+)([A-Z][a-z])", r'\1_\2', word)
+     word = re.sub(r"([a-z\d])([A-Z])", r'\1_\2', word)
+     word = word.replace("-", "_")
+     return word.lower()

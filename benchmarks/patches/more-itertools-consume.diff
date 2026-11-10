@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -197,7 +197,7 @@
+         deque(iterator, maxlen=0)
+     else:
+         # advance to the empty slice starting at position n
+-        next(islice(iterator, n + 1, n + 1), None)
++        next(islice(iterator, n, n), None)
+ 
+ 
+ def nth(iterable, n, default=None):

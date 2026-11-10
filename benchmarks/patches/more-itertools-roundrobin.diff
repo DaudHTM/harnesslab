@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -401,7 +401,7 @@
+     """
+     # Algorithm credited to George Sakkis
+     iterators = map(iter, iterables)
+-    for num_active in range(len(iterables), 1, -1):
++    for num_active in range(len(iterables), 0, -1):
+         iterators = cycle(islice(iterators, num_active))
+         yield from map(next, iterators)
+ 

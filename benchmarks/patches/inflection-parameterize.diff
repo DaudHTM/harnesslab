@@ -1,0 +1,11 @@
+--- a/inflection/__init__.py
++++ b/inflection/__init__.py
+@@ -281,7 +281,7 @@
+         # Remove leading/trailing separator.
+         string = re.sub(r"(?i)^{sep}|{sep}$".format(sep=re_sep), '', string)
+ 
+-    return string.upper()
++    return string.lower()
+ 
+ 
+ def pluralize(word: str) -> str:

@@ -1,0 +1,11 @@
+--- a/boltons/iterutils.py
++++ b/boltons/iterutils.py
+@@ -1036,7 +1036,7 @@
+ 
+     .. _the original standalone module: https://github.com/hynek/first
+     """
+-    return next(filter(None, iterable), default)
++    return next(filter(key, iterable), default)
+ 
+ 
+ def flatten_iter(iterable):

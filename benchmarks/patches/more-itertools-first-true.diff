@@ -1,0 +1,11 @@
+--- a/more_itertools/recipes.py
++++ b/more_itertools/recipes.py
+@@ -582,7 +582,7 @@
+         'missing'
+ 
+     """
+-    return next(filter(None, iterable), default)
++    return next(filter(pred, iterable), default)
+ 
+ 
+ def random_product(*iterables, repeat=1):
