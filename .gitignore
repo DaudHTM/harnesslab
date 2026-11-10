@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.harnesslab/
+.env
+node_modules/
+dist/
+.pnpm-store/
+*.tsbuildinfo
+test-results/
+playwright-report/

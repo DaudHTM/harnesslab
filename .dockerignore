@@ -1,0 +1,9 @@
+.git
+.venv
+.harnesslab
+.pnpm-store
+frontend/node_modules
+frontend/dist
+**/__pycache__
+.pytest_cache
+.env

@@ -1,0 +1,8 @@
+{
+  "name": "resilient",
+  "provider": "local",
+  "model": "qwen3-4b-instruct-2507-q8_0",
+  "pricing_date": "local-no-api-charge",
+  "max_output_tokens": 2048,
+  "context_chars": 24000
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Scripted fixture: baseline vs resilient",
+  "tasks": ["../benchmarks/tasks/tag-normalization.json"],
+  "configs": [
+    {"name": "baseline", "model": "fake", "provider": "fake"},
+    {"name": "resilient", "model": "fake", "provider": "fake"}
+  ],
+  "repetitions": 1
+}
