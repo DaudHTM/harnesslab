@@ -2,6 +2,8 @@
 
 An evaluation and debugging platform for coding-agent harnesses. Run a task at a pinned commit, inspect its MCP tool trace, grade the patch in a fresh environment, and compare harness configurations.
 
+Repository: [DaudHTM/harnesslab](https://github.com/DaudHTM/harnesslab) (private).
+
 **Status:** working implementation with a validated 30-task authored regression corpus. The default model is an explicitly scripted integration fixture. A real Qwen3 local-model adapter is also available without API fees; the held-out comparison is still pending. Scripted fixture success is **not** evidence of AI coding ability.
 
 ## Quick start
@@ -130,6 +132,8 @@ pnpm build
 ```
 
 Tests use no paid APIs. They cover independent grading, real MCP calls, lease fencing, a worker process crash/replacement, concurrent claims, cancellation, path escapes, deadlines, rate limits, tool faults, and API behavior. macOS-specific tests verify file/network boundaries. Browser tests exist but have not been executed because browser access was declined.
+
+The GitHub Actions configuration is preserved at `docs/ci/github-actions.yml`. CI is not enabled yet: the credential used for the initial upload has repository access but lacks the `workflow` scope. Once a credential with workflow permission is configured, move the template to `.github/workflows/ci.yml` and push. It defines backend, real Docker, PostgreSQL integration, and frontend build checks.
 
 ## Persistence
 

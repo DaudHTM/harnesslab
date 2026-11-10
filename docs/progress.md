@@ -30,6 +30,7 @@
 
 ## Outstanding against the full project plan
 
+- Enable the preserved GitHub Actions template after a GitHub credential with workflow permission is available. Source and evidence are uploaded to the private `DaudHTM/harnesslab` repository.
 - Verify Docker execution and cleanup on a Docker-enabled host. Real PostgreSQL concurrency, budgets, fencing, and worker/grading round trips now pass against locally built PostgreSQL 17.11.
 - Verify the implemented orphan reconciliation against real Docker containers after a worker is killed.
 - Run the fresh free local-model pilot and 120-trial held-out evaluation on AC power; publish actual results and paired analysis. The earlier development pilot is published separately with negative results.
