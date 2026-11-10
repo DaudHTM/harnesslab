@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="1.181" timestamp="2026-11-09T19:31:56.993959-06:00"><testcase classname="tests.test_faults" name="test_provider_rate_limit_retry_is_bounded" time="0.512" /></testsuite></testsuites>

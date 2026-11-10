@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "kind": "deterministic infrastructure fault scenarios",
+  "learned_model_benchmark": false,
+  "passed": 10,
+  "total": 10,
+  "scenarios": [
+    {
+      "scenario": "mcp_timeout",
+      "passed": true,
+      "duration_seconds": 1.7028550000104588,
+      "test": "tests/test_core.py::test_complete_run[resilient-mcp_timeout]",
+      "output": ".                                                                        [100%]\n1 passed in 1.49s\n"
+    },
+    {
+      "scenario": "malformed_output",
+      "passed": true,
+      "duration_seconds": 1.4419804170029238,
+      "test": "tests/test_core.py::test_complete_run[resilient-malformed_output]",
+      "output": ".                                                                        [100%]\n1 passed in 1.28s\n"
+    },
+    {
+      "scenario": "hanging_command",
+      "passed": true,
+      "duration_seconds": 0.5365411250095349,
+      "test": "tests/test_faults.py::test_hanging_command_is_killed",
+      "output": ".                                                                        [100%]\n1 passed in 0.37s\n"
+    },
+    {
+      "scenario": "worker_crash",
+      "passed": true,
+      "duration_seconds": 3.164656583976466,
+      "test": "tests/test_faults.py::test_worker_process_crash_and_recovery",
+      "output": ".                                                                        [100%]\n1 passed in 2.63s\n"
+    },
+    {
+      "scenario": "provider_rate_limit",
+      "passed": true,
+      "duration_seconds": 1.6179204170184676,
+      "test": "tests/test_faults.py::test_provider_rate_limit_retry_is_bounded",
+      "output": ".                                                                        [100%]\n1 passed in 1.18s\n"
+    },
+    {
+      "scenario": "budget_exhaustion",
+      "passed": true,
+      "duration_seconds": 1.786255541985156,
+      "test": "tests/test_core.py::test_token_budget_stops_before_model",
+      "output": ".                                                                        [100%]\n1 passed in 1.46s\n"
+    },
+    {
+      "scenario": "path_injection",
+      "passed": true,
+      "duration_seconds": 0.6635357080085669,
+      "test": "tests/test_faults.py::test_mcp_rejects_injected_path_escape",
+      "output": ".                                                                        [100%]\n1 passed in 0.40s\n"
+    },
+    {
+      "scenario": "live_cancellation",
+      "passed": true,
+      "duration_seconds": 1.6231782909890171,
+      "test": "tests/test_faults.py::test_live_cancellation_unwinds_stdio_without_infrastructure_error",
+      "output": ".                                                                        [100%]\n1 passed in 1.38s\n"
+    },
+    {
+      "scenario": "mcp_crash",
+      "passed": true,
+      "duration_seconds": 0.8234592909866478,
+      "test": "tests/test_maintenance_and_mcp.py::test_crashed_stdio_server_fails_without_hanging",
+      "output": ".                                                                        [100%]\n1 passed in 0.61s\n"
+    },
+    {
+      "scenario": "mcp_unresponsive",
+      "passed": true,
+      "duration_seconds": 4.448188041977119,
+      "test": "tests/test_maintenance_and_mcp.py::test_unresponsive_stdio_server_has_bounded_handshake",
+      "output": ".                                                                        [100%]\n1 passed in 4.27s\n"
+    }
+  ]
+}

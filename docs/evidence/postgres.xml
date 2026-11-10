@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="3.432" timestamp="2026-11-09T06:34:17.394043-06:00"><testcase classname="tests.test_postgres" name="test_postgres_concurrent_claims_and_schema_startup" time="0.167" /><testcase classname="tests.test_postgres" name="test_postgres_atomic_budget_and_fencing" time="0.111" /><testcase classname="tests.test_postgres" name="test_postgres_worker_grading_roundtrip" time="1.638" /></testsuite></testsuites>

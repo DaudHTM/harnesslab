@@ -1,0 +1,180 @@
+{
+  "experiment_id": "ee82646bb3ef48fdbbb5273bc339da0e",
+  "reason": "Development pilot stopped after tool-error masking and cancellation classification issues were identified. Not a final benchmark.",
+  "comparison": [
+    {
+      "harness": "baseline",
+      "model": "qwen3-4b-instruct-2507-q8_0",
+      "provider": "local",
+      "config_hash": "02b8b004e3b2b5576d47f340f7c63485fa944e53426ab8a6d092788b23f18a68",
+      "scripted_fixture": false,
+      "total": 5,
+      "completed": 5,
+      "valid_trials": 1,
+      "solved": 0,
+      "success_rate": 0.0,
+      "success_interval_95": [
+        0,
+        0.7934567085261071
+      ],
+      "interval_method": "descriptive Wilson interval over trials; repeated trials are correlated by task",
+      "cost_usd": 0.0,
+      "cost_per_success_usd": null,
+      "median_seconds": 109.08599766649422,
+      "p95_seconds": 144.26856358299847,
+      "infrastructure_errors": 2
+    },
+    {
+      "harness": "resilient",
+      "model": "qwen3-4b-instruct-2507-q8_0",
+      "provider": "local",
+      "config_hash": "dd5299fab13c4aa4a8c11e81fdfcb160030d4fff432f93e976a2bb0b0f10cb0b",
+      "scripted_fixture": false,
+      "total": 5,
+      "completed": 5,
+      "valid_trials": 2,
+      "solved": 0,
+      "success_rate": 0.0,
+      "success_interval_95": [
+        0,
+        0.6576280471103807
+      ],
+      "interval_method": "descriptive Wilson interval over trials; repeated trials are correlated by task",
+      "cost_usd": 0.0,
+      "cost_per_success_usd": null,
+      "median_seconds": 90.86773804100812,
+      "p95_seconds": 187.49899454100523,
+      "infrastructure_errors": 1
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "baseline_config_hash": "02b8b004e3b2b5576d47f340f7c63485fa944e53426ab8a6d092788b23f18a68",
+      "resilient_config_hash": "dd5299fab13c4aa4a8c11e81fdfcb160030d4fff432f93e976a2bb0b0f10cb0b",
+      "model": "qwen3-4b-instruct-2507-q8_0",
+      "common_tasks": 1,
+      "balanced_trials": true,
+      "mean_task_success_difference": 0,
+      "resilient_better_tasks": 0,
+      "baseline_better_tasks": 0,
+      "tied_tasks": 1,
+      "tasks": [
+        {
+          "task": "boltons-split-iter",
+          "baseline_trials": 1,
+          "resilient_trials": 1,
+          "baseline_success_rate": 0,
+          "resilient_success_rate": 0,
+          "difference": 0
+        }
+      ],
+      "interpretation": "Descriptive paired comparison; no significance claim. Infrastructure-error and cancelled trials are excluded."
+    }
+  ],
+  "accounting": {
+    "actual_usd": 0,
+    "unsettled_reserved_usd": 0.0,
+    "unsettled_calls": 4
+  },
+  "runs": [
+    {
+      "id": "51f5b3f45a2849dfa81683cb25cab71c",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/boltons-split-iter.json",
+      "status": "budget_exceeded",
+      "attempt": 1,
+      "result": {
+        "input_tokens": 51010,
+        "output_tokens": 243,
+        "cost_usd": 0.0,
+        "duration_seconds": 73.90343174998998,
+        "patch": "${PROJECT_ROOT}/.harnesslab/artifacts/51f5b3f45a2849dfa81683cb25cab71c/1/patch.diff",
+        "provider": "local"
+      }
+    },
+    {
+      "id": "4b69512c9ef84630817785d68bf82162",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/boltons-split-iter.json",
+      "status": "unsolved",
+      "attempt": 1,
+      "result": {
+        "input_tokens": 46013,
+        "output_tokens": 1973,
+        "cost_usd": 0.0,
+        "duration_seconds": 187.49899454100523,
+        "patch": "${PROJECT_ROOT}/.harnesslab/artifacts/4b69512c9ef84630817785d68bf82162/1/patch.diff",
+        "provider": "local"
+      }
+    },
+    {
+      "id": "38d6d6c9d130428b8ee547b1e9cc7035",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/inflection-dasherize.json",
+      "status": "infrastructure_error",
+      "attempt": 2,
+      "result": {
+        "error": "worker lease expired twice"
+      }
+    },
+    {
+      "id": "7ab9a019223645e98518e7a978772e40",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/inflection-dasherize.json",
+      "status": "budget_exceeded",
+      "attempt": 1,
+      "result": {
+        "input_tokens": 80437,
+        "output_tokens": 517,
+        "cost_usd": 0.0,
+        "duration_seconds": 90.86773804100812,
+        "patch": "${PROJECT_ROOT}/.harnesslab/artifacts/7ab9a019223645e98518e7a978772e40/1/patch.diff",
+        "provider": "local"
+      }
+    },
+    {
+      "id": "85100e18628f4a0a9eabc02d3f3ca316",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/more-itertools-take.json",
+      "status": "infrastructure_error",
+      "attempt": 1,
+      "result": {
+        "error": "unhandled errors in a TaskGroup (1 sub-exception)",
+        "duration_seconds": 144.26856358299847
+      }
+    },
+    {
+      "id": "bd3cdd558dc847289e5ac8f2c8417beb",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/more-itertools-take.json",
+      "status": "infrastructure_error",
+      "attempt": 1,
+      "result": {
+        "error": "unhandled errors in a TaskGroup (1 sub-exception)",
+        "duration_seconds": 71.76323058299022
+      }
+    },
+    {
+      "id": "b7186fa3a41b4db19bf9e37b44bef6e5",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/boltons-lstrip-iter.json",
+      "status": "cancelled",
+      "attempt": 0,
+      "result": {}
+    },
+    {
+      "id": "389dfda86a58443c9e0497a75fc5cec0",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/boltons-lstrip-iter.json",
+      "status": "cancelled",
+      "attempt": 0,
+      "result": {}
+    },
+    {
+      "id": "01dd6198e7bf4285821e962397584321",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/inflection-humanize.json",
+      "status": "cancelled",
+      "attempt": 0,
+      "result": {}
+    },
+    {
+      "id": "af600cbbffb348de9b0420ef4c48794c",
+      "task_path": "${PROJECT_ROOT}/benchmarks/tasks/inflection-humanize.json",
+      "status": "cancelled",
+      "attempt": 0,
+      "result": {}
+    }
+  ]
+}

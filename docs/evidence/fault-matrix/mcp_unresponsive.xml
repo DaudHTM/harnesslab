@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="4.271" timestamp="2026-11-09T19:32:03.355554-06:00"><testcase classname="tests.test_maintenance_and_mcp" name="test_unresponsive_stdio_server_has_bounded_handshake" time="4.025" /></testsuite></testsuites>

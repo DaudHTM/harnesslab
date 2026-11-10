@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.374" timestamp="2026-11-09T19:31:53.118632-06:00"><testcase classname="tests.test_faults" name="test_hanging_command_is_killed" time="0.115" /></testsuite></testsuites>

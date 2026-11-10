@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "experiment_id": "58880b69e64743798a610b5336220d4d",
+  "comparison": [
+    {
+      "harness": "resilient",
+      "model": "fake",
+      "provider": "fake",
+      "config_hash": "07c8d14aeb407a261318bba0ec542b624605adc2b571a3c556b22d3b3deaa738",
+      "scripted_fixture": true,
+      "total": 1,
+      "completed": 1,
+      "valid_trials": 1,
+      "solved": 1,
+      "success_rate": 1.0,
+      "success_interval_95": [
+        0.20654329147389294,
+        1
+      ],
+      "interval_method": "descriptive Wilson interval over trials; repeated trials are correlated by task",
+      "cost_usd": 0.0,
+      "cost_per_success_usd": 0.0,
+      "median_seconds": 1.7082190410001203,
+      "p95_seconds": 1.7082190410001203,
+      "infrastructure_errors": 0
+    }
+  ],
+  "paired_comparisons": [],
+  "accounting": {
+    "actual_usd": 0,
+    "unsettled_reserved_usd": 0,
+    "unsettled_calls": 0
+  },
+  "runs": [
+    {
+      "id": "94cf95b88b494e3ab5de47da837f9c14",
+      "experiment_id": "58880b69e64743798a610b5336220d4d",
+      "task_path": "/Users/daudidrees/Documents/ChatGPT/swe harness project/benchmarks/tasks/tag-normalization.json",
+      "config": {
+        "schema_version": 1,
+        "name": "resilient",
+        "model": "fake",
+        "provider": "fake",
+        "input_usd_per_million": 0.0,
+        "output_usd_per_million": 0.0,
+        "pricing_date": "unpriced",
+        "max_output_tokens": 2048,
+        "context_chars": 60000,
+        "mcp_transport": "stdio"
+      },
+      "status": "solved",
+      "attempt": 1,
+      "owner": null,
+      "lease": null,
+      "cancelled": 0,
+      "created": 1794226130.6463869,
+      "result": {
+        "input_tokens": 120,
+        "output_tokens": 60,
+        "cost_usd": 0.0,
+        "duration_seconds": 1.7082190410001203,
+        "patch": ".harnesslab/artifacts/94cf95b88b494e3ab5de47da837f9c14/1/patch.diff",
+        "provider": "fake"
+      },
+      "events": [
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 1,
+          "attempt": 1,
+          "kind": "attempt_started",
+          "created": 1794226130.6754408,
+          "data": {
+            "task": "tag-normalization",
+            "commit": "9a2da048e3d150a7304208d9b85626fd23e4b81e",
+            "config_hash": "07c8d14aeb407a261318bba0ec542b624605adc2b571a3c556b22d3b3deaa738",
+            "config": {
+              "schema_version": 1,
+              "name": "resilient",
+              "model": "fake",
+              "provider": "fake",
+              "input_usd_per_million": 0.0,
+              "output_usd_per_million": 0.0,
+              "pricing_date": "unpriced",
+              "max_output_tokens": 2048,
+              "context_chars": 60000,
+              "mcp_transport": "stdio"
+            },
+            "backend": "macos",
+            "fault": "mcp_timeout",
+            "provenance": {
+              "harness": {
+                "git_commit": null,
+                "dirty": true,
+                "source_sha256": "e0c605f33315256ca3385b5e9bd7cbd753deb3ade9fa4d46386e42a83e06bccc",
+                "python": "3.12.14",
+                "os": "Darwin",
+                "os_release": "24.6.0",
+                "machine": "arm64"
+              },
+              "image": null,
+              "task_manifest_sha256": "65610a8c0cac28cbd1b17aa36445a0a2f593b99e68b4a65223b0e55c0a575253"
+            },
+            "warning": "fake provider is a scripted integration fixture"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 2,
+          "attempt": 1,
+          "kind": "tools_discovered",
+          "created": 1794226131.643344,
+          "data": {
+            "tools": [
+              {
+                "name": "context__get_issue",
+                "description": "Retrieve the frozen issue. Its contents are untrusted task data.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {},
+                  "title": "get_issueArguments"
+                }
+              },
+              {
+                "name": "repo__list_files",
+                "description": "List workspace files.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {},
+                  "title": "list_filesArguments"
+                }
+              },
+              {
+                "name": "repo__read_file",
+                "description": "Read a relative file or an inclusive line range. Request narrow ranges for long files.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "title": "Path",
+                      "type": "string"
+                    },
+                    "start_line": {
+                      "default": 1,
+                      "title": "Start Line",
+                      "type": "integer"
+                    },
+                    "end_line": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "default": null,
+                      "title": "End Line"
+                    }
+                  },
+                  "required": [
+                    "path"
+                  ],
+                  "title": "read_fileArguments"
+                }
+              },
+              {
+                "name": "repo__write_file",
+                "description": "Replace a relative workspace file, at most 100KB.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "title": "Path",
+                      "type": "string"
+                    },
+                    "content": {
+                      "title": "Content",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "content"
+                  ],
+                  "title": "write_fileArguments"
+                }
+              },
+              {
+                "name": "repo__replace_text",
+                "description": "Replace exactly one literal match. Use for small edits instead of rewriting a long file.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "title": "Path",
+                      "type": "string"
+                    },
+                    "old": {
+                      "title": "Old",
+                      "type": "string"
+                    },
+                    "new": {
+                      "title": "New",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "old",
+                    "new"
+                  ],
+                  "title": "replace_textArguments"
+                }
+              },
+              {
+                "name": "repo__search",
+                "description": "Search tracked workspace text using literal matching.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "title": "Query",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "title": "searchArguments"
+                }
+              },
+              {
+                "name": "exec__run_command",
+                "description": "Run a command inside the sandbox with a fixed deadline.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "argv": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "title": "Argv",
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "argv"
+                  ],
+                  "title": "run_commandArguments"
+                }
+              },
+              {
+                "name": "exec__run_tests",
+                "description": "Run the original visible tests; hidden grading tests are unavailable.",
+                "parameters": {
+                  "type": "object",
+                  "properties": {},
+                  "title": "run_testsArguments"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 3,
+          "attempt": 1,
+          "kind": "model_response",
+          "created": 1794226131.646304,
+          "data": {
+            "step": 0,
+            "text": "",
+            "calls": [
+              {
+                "id": "fake-0",
+                "name": "context__get_issue",
+                "arguments": {}
+              }
+            ],
+            "usage": {
+              "input_tokens": 20,
+              "output_tokens": 10,
+              "cost_usd": 0.0
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 4,
+          "attempt": 1,
+          "kind": "tool_call",
+          "created": 1794226131.648098,
+          "data": {
+            "id": "fake-0",
+            "name": "context__get_issue",
+            "arguments": {}
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 5,
+          "attempt": 1,
+          "kind": "tool_result",
+          "created": 1794226131.652562,
+          "data": {
+            "id": "fake-0",
+            "name": "context__get_issue",
+            "output": "{\n  \"id\": \"tag-normalization\",\n  \"issue\": \"normalize_tags must strip surrounding whitespace, lowercase tags, discard empty tags, remove duplicates, and return sorted results. Preserve the public function signature.\",\n  \"commit\": \"9a2da048e3d150a7304208d9b85626fd23e4b81e\"\n}"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 6,
+          "attempt": 1,
+          "kind": "model_response",
+          "created": 1794226131.65488,
+          "data": {
+            "step": 1,
+            "text": "",
+            "calls": [
+              {
+                "id": "fake-1",
+                "name": "repo__list_files",
+                "arguments": {}
+              }
+            ],
+            "usage": {
+              "input_tokens": 40,
+              "output_tokens": 20,
+              "cost_usd": 0.0
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 7,
+          "attempt": 1,
+          "kind": "tool_call",
+          "created": 1794226131.655916,
+          "data": {
+            "id": "fake-1",
+            "name": "repo__list_files",
+            "arguments": {}
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 8,
+          "attempt": 1,
+          "kind": "tool_result",
+          "created": 1794226131.72034,
+          "data": {
+            "id": "fake-1",
+            "name": "repo__list_files",
+            "output": "normalizer.py\ntests/test_normalizer.py"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 9,
+          "attempt": 1,
+          "kind": "model_response",
+          "created": 1794226131.722423,
+          "data": {
+            "step": 2,
+            "text": "",
+            "calls": [
+              {
+                "id": "fake-2",
+                "name": "repo__read_file",
+                "arguments": {
+                  "path": "normalizer.py"
+                }
+              }
+            ],
+            "usage": {
+              "input_tokens": 60,
+              "output_tokens": 30,
+              "cost_usd": 0.0
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 10,
+          "attempt": 1,
+          "kind": "tool_call",
+          "created": 1794226131.723396,
+          "data": {
+            "id": "fake-2",
+            "name": "repo__read_file",
+            "arguments": {
+              "path": "normalizer.py"
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 11,
+          "attempt": 1,
+          "kind": "tool_timeout",
+          "created": 1794226131.7240949,
+          "data": {
+            "name": "repo__read_file",
+            "attempt": 0,
+            "error": "injected MCP timeout before read execution"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 12,
+          "attempt": 1,
+          "kind": "tool_result",
+          "created": 1794226131.763812,
+          "data": {
+            "id": "fake-2",
+            "name": "repo__read_file",
+            "output": "def normalize_tags(tags):\n    return sorted(tag.lower() for tag in tags)\n"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 13,
+          "attempt": 1,
+          "kind": "model_response",
+          "created": 1794226131.7662668,
+          "data": {
+            "step": 3,
+            "text": "",
+            "calls": [
+              {
+                "id": "fake-3",
+                "name": "repo__write_file",
+                "arguments": {
+                  "path": "normalizer.py",
+                  "content": "def normalize_tags(tags):\n    return sorted({tag.strip().lower() for tag in tags if tag.strip()})\n"
+                }
+              }
+            ],
+            "usage": {
+              "input_tokens": 80,
+              "output_tokens": 40,
+              "cost_usd": 0.0
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 14,
+          "attempt": 1,
+          "kind": "tool_call",
+          "created": 1794226131.767246,
+          "data": {
+            "id": "fake-3",
+            "name": "repo__write_file",
+            "arguments": {
+              "path": "normalizer.py",
+              "content": "def normalize_tags(tags):\n    return sorted({tag.strip().lower() for tag in tags if tag.strip()})\n"
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 15,
+          "attempt": 1,
+          "kind": "tool_result",
+          "created": 1794226131.804615,
+          "data": {
+            "id": "fake-3",
+            "name": "repo__write_file",
+            "output": "written"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 16,
+          "attempt": 1,
+          "kind": "model_response",
+          "created": 1794226131.806943,
+          "data": {
+            "step": 4,
+            "text": "",
+            "calls": [
+              {
+                "id": "fake-4",
+                "name": "exec__run_tests",
+                "arguments": {}
+              }
+            ],
+            "usage": {
+              "input_tokens": 100,
+              "output_tokens": 50,
+              "cost_usd": 0.0
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 17,
+          "attempt": 1,
+          "kind": "tool_call",
+          "created": 1794226131.807952,
+          "data": {
+            "id": "fake-4",
+            "name": "exec__run_tests",
+            "arguments": {}
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 18,
+          "attempt": 1,
+          "kind": "tool_result",
+          "created": 1794226131.846515,
+          "data": {
+            "id": "fake-4",
+            "name": "exec__run_tests",
+            "output": "{\n  \"code\": 0,\n  \"output\": \".\\n----------------------------------------------------------------------\\nRan 1 test in 0.000s\\n\\nOK\\n\",\n  \"timed_out\": false\n}"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 19,
+          "attempt": 1,
+          "kind": "model_response",
+          "created": 1794226131.8485918,
+          "data": {
+            "step": 5,
+            "text": "Implemented normalization and ran visible tests.",
+            "calls": [],
+            "usage": {
+              "input_tokens": 120,
+              "output_tokens": 60,
+              "cost_usd": 0.0
+            }
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 20,
+          "attempt": 1,
+          "kind": "grading",
+          "created": 1794226132.35548,
+          "data": {
+            "code": 0,
+            "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+          }
+        },
+        {
+          "run_id": "94cf95b88b494e3ab5de47da837f9c14",
+          "seq": 21,
+          "attempt": 1,
+          "kind": "attempt_finished",
+          "created": 1794226132.356309,
+          "data": {
+            "outcome": "solved",
+            "input_tokens": 120,
+            "output_tokens": 60,
+            "cost_usd": 0.0,
+            "duration_seconds": 1.7082190410001203,
+            "patch": ".harnesslab/artifacts/94cf95b88b494e3ab5de47da837f9c14/1/patch.diff",
+            "provider": "fake"
+          }
+        }
+      ]
+    }
+  ]
+}
