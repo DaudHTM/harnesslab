@@ -1,0 +1,14 @@
+{
+  "created": "2026-11-10T09:48:10.437392+00:00",
+  "repository": "https://github.com/DaudHTM/harnesslab",
+  "clone_commit": "0f6d7ecdb9da4d567fb626c093062d96a464c4ea",
+  "task": "tag-normalization",
+  "provider": "fake",
+  "backend": "macos",
+  "status": "solved",
+  "run_id": "66532f2c1cdb4bbd954136ed9ed8bdae",
+  "duration_seconds": 1.2329357920098118,
+  "event_count": 20,
+  "patch_sha256": "9c6473941baca19d33cfb3c264c85069f2fa01a8cb77187aa17d2649ad3b4fb9",
+  "scope": "Fresh GitHub clone, offline fixture bootstrap, stdio MCP agent run, and independent grading. Reused the existing Python environment; no model inference or browser verification."
+}
